@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+/* ----ROOT VARIABLES---- */
+:root {
+  --color-primary: #383167;
+  --color-secondary: #026606;
+  --color-secondary-logo: #026606;
+  --color-tertiary: #fefd0d;
+  --color-danger: #c80707;
+  --color-success: #d5ffd6;
+  --color-warning: #ffe6e6;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #383167;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f6;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* ----Dark Theme Variables---- */
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-secondary-logo: #fefd0d;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-background);
+  color: var(--color-dark);
+  position: relative;
+}
+
+.login-top {
+  width: 100%;
+  margin-top: -3rem;
+  margin-right: -5rem;
+  margin-left: -3rem;
+}
+.login-top .top-color-box {
+  height: 144px;
+}
+.login-top .green {
+  background: var(--color-secondary);
+}
+.login-top .yellow {
+  background: var(--color-tertiary);
+}
+.login-top .yellow img {
+  width: 6.25rem;
+}
+.login-top .blue {
+  background: var(--color-primary);
+}
+
+.sidebar {
+  height: 100vh;
+}
+.sidebar .header-box img {
+  width: 3.4rem;
+  height: 3.5rem;
+}
+.sidebar .header-box h2 {
+  color: var(--color-secondary-logo);
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+.sidebar li {
+  padding: 2px 0;
+}
+.sidebar li .active {
+  background: var(--color-light);
+  color: var(--color-primary);
+  position: relative;
+}
+.sidebar li .active:before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--color-primary);
+  left: -1px;
+}
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  font-size: 0.87rem;
+  font-weight: 500;
+  height: 3.7rem;
+  color: var(--color-dark);
+  padding: 0.5rem 1rem;
+}
+.sidebar li a:hover {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
+.sidebar li a i {
+  font-size: 20px;
+  margin-right: 1rem;
+}
+
+#side-nav {
+  min-width: 200px;
+  max-width: 200px;
+}/*# sourceMappingURL=main.css.map */
