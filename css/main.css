@@ -61,6 +61,90 @@ body {
   position: relative;
 }
 
+a {
+  color: var(--color-dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.space {
+  height: 5rem;
+}
+
+.spaceL {
+  margin-top: 4.2rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  /* font-weight: 500; */
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+b {
+  color: var(--color-dar);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
 .login-top {
   width: 100%;
   margin-top: -3rem;
@@ -96,21 +180,16 @@ body {
   text-transform: uppercase;
   line-height: 1rem;
 }
-.sidebar li {
-  padding: 2px 0;
-}
-.sidebar li .active {
-  background: var(--color-light);
-  color: var(--color-primary);
+.sidebar ul {
   position: relative;
 }
-.sidebar li .active:before {
+.sidebar ul li:last-child {
   position: absolute;
-  content: "";
-  width: 6px;
-  height: 100%;
-  background: var(--color-primary);
-  left: -1px;
+  bottom: -30vh;
+  width: 100%;
+}
+.sidebar li {
+  padding: 2px 0;
 }
 .sidebar li a {
   display: flex;
@@ -129,8 +208,146 @@ body {
   font-size: 20px;
   margin-right: 1rem;
 }
+.sidebar li.active {
+  background: var(--color-light);
+  color: var(--color-primary);
+  position: relative;
+}
+.sidebar li.active:before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--color-primary);
+  top: 0;
+  left: -1px;
+}
+.sidebar li.active a,
+.sidebar li.active a:hover {
+  color: var(--color-primary);
+}
+
+.content {
+  width: 100%;
+}
+.content nav {
+  background: transparent;
+}
+.content nav button {
+  cursor: pointer;
+  color: var(--color-dark);
+}
+.content nav .alert .notification {
+  position: relative;
+}
+.content nav .alert .notification i {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+.content nav .alert .notification .count {
+  width: 15px;
+  height: 15px;
+  background: var(--color-secondary);
+  color: white;
+  font-size: 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content nav .alert .mail {
+  position: relative;
+}
+.content nav .alert .mail i {
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+.content nav .alert .mail .count {
+  width: 15px;
+  height: 15px;
+  background: var(--color-tertiary);
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content nav .theme-toggler {
+  background: var(--color-light);
+  height: 1.6rem;
+  width: 5rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+.content nav .theme-toggler i {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content nav .theme-toggler i.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+.content nav .profile {
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+.content nav .profile p {
+  margin-bottom: 0.1rem;
+}
 
 #side-nav {
   min-width: 200px;
   max-width: 200px;
+  transition: all 0.3s;
+}
+
+main .quick-info .top .right .ring {
+  height: 94px;
+  width: 94px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .quick-info .top .right .ring i {
+  color: var(--color-white);
+  font-size: 3rem;
+}
+main .quick-info .top .right .student {
+  background: var(--color-secondary);
+}
+main .quick-info .top .right .instructors {
+  background: var(--color-tertiary);
+}
+main .quick-info .top .right .instructors i {
+  color: var(--color-primary);
+  font-size: 3rem;
+}
+main .quick-info .top .right .platoons {
+  background: var(--color-secondary);
+}
+@media (max-width: 767px) {
+  #side-nav {
+    background: var(--color-white);
+    margin-left: -250px;
+    position: fixed;
+    min-height: 100vh;
+    z-index: 1;
+  }
+  #side-nav.active {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
