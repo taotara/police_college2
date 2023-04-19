@@ -352,8 +352,8 @@ main {
     .top {
       .right {
         .ring {
-          height: 94px;
-          width: 94px;
+          height: 50%;
+          width: 50%;
           border-radius: 50%;
           display: flex;
           justify-content: center;
@@ -363,10 +363,6 @@ main {
             color: var(--color-white);
             font-size: 3rem;
           }
-        }
-
-        .platoons {
-          background: red;
         }
 
         .student {
@@ -382,8 +378,6 @@ main {
           }
         }
 
-        
-
         .left {
         }
       }
@@ -391,10 +385,76 @@ main {
   }
 
   .chart-container {
-    width: 50%;
-    height: 50%;
+    position: relative;
+    width: 100%;
+    height: 100%;
     margin: auto;
   }
+
+  .student-monitor {
+    margin-top: 2rem;
+    width: 100%;
+
+    .item {
+      width: 100%;
+      background: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+      padding: 1.4rem var(--card-padding);
+      border-radius: var(--border-radius-3);
+      transition: all 300ms ease;
+
+      .student-monitor-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .student-monitor-bottom {
+        width: 100%;
+
+        /* Progress Bar */
+        .bar {
+          width: 100%;
+          height: 10px;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+
+          &::before {
+            content: '';
+            display: flex;
+            justify-content: end;
+            width: calc(var(--percent) * 1%);
+            height: 100%;
+            background: #2486ff;
+            white-space: nowrap;
+
+            background-image: linear-gradient(red, red),
+              linear-gradient(orange, orange), linear-gradient(orchid, orchid),
+              linear-gradient(lightblue, lightblue),
+              linear-gradient(green, green);
+            background-size: calc((var(--percent) - 80) * 100%) 100%,
+              calc((var(--percent) - 60) * 100%) 100%,
+              calc((var(--percent) - 40) * 100%) 100%,
+              calc((var(--percent) - 20) * 100%) 100%, 100% 100%;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 767px) {

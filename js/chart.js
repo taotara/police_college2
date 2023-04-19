@@ -21,6 +21,7 @@ const myLineChart = new Chart(ctx, {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     scales: {
       yAxes: [
         {
@@ -32,7 +33,6 @@ const myLineChart = new Chart(ctx, {
     },
   },
 });
-
 
 // Bar chart
 
@@ -51,9 +51,74 @@ new Chart(ctx2, {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,
+      },
+    },
+  },
+});
+
+// Doughnut chart
+
+const ctx3 = document.getElementById('doughnutChart');
+
+new Chart(ctx3, {
+  type: 'doughnut',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [300, 50, 100],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+        ],
+        hoverOffset: 4,
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right'
+      }
+    }
+  },
+});
+
+// Pie chart
+
+const ctx4 = document.getElementById('pieChart');
+
+new Chart(ctx4, {
+  type: 'pie',
+  data: {
+    labels: ['Green', 'Blue', 'Yellow'],
+    datasets: [
+      {
+        labels: ['Red', 'Blue', 'Yellow'],
+        data: [300, 50, 100],
+        backgroundColor: [
+          'rgb(2, 102, 6)',
+          'rgb(56, 49, 103)',
+          'rgb(255, 205, 86)',
+        ],
+        hoverOffset: 4,
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
       },
     },
   },
