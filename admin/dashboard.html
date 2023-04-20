@@ -197,7 +197,7 @@
           </div>
           <div class="row  px-4 my-0">
             <!-- Card with Line chart-->
-            <div class="col-md-6 stretch-card grid-margin mt-5">
+            <div class="col-md-8 stretch-card grid-margin mt-5">
               <div class="card shadow bg-body rounded border-0">
                 <div class="card-header"><h2>Line Chart</h2></div>
                 <div class="card-body">
@@ -207,8 +207,24 @@
                 </div>
               </div>
             </div>
+            <!-- Card with Pie chart-->
+            <div class="col-md-4 stretch-card grid-margin mt-5">
+              <div class="card shadow bg-body rounded border-0">
+                <div class="card-header"><h2>Pie Chart</h2></div>
+                <div class="card-body">
+                  <div class="card chart-container border-0 py-3">
+                    <canvas id="pieChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+
+          <div class="row  px-4 my-4">
             <!-- Card with Bar chart-->
-            <div class="col-md-6 stretch-card grid-margin mt-5">
+            <div class="col-md-8 stretch-card grid-margin mt-5">
               <div class="card shadow bg-body rounded border-0">
                 <div class="card-header"><h2>Bar Chart</h2></div>
                 <div class="card-body">
@@ -218,28 +234,13 @@
                 </div>
               </div>
             </div>
-          </div>
-
-
-          <div class="row  px-4 my-4">
             <!-- Card with Doughnut chart-->
-            <div class="col-md-6 stretch-card grid-margin mt-5">
+            <div class="col-md-4 stretch-card grid-margin mt-5">
               <div class="card shadow bg-body rounded border-0">
                 <div class="card-header"><h2>Doughnut Chart</h2></div>
                 <div class="card-body">
-                  <div class="card chart-container border-0">
+                  <div class="card chart-container border-0 py-3">
                     <canvas id="doughnutChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card with Pie chart-->
-            <div class="col-md-6 stretch-card grid-margin mt-5">
-              <div class="card shadow bg-body rounded border-0">
-                <div class="card-header"><h2>Pie Chart</h2></div>
-                <div class="card-body">
-                  <div class="card chart-container border-0">
-                    <canvas id="pieChart"></canvas>
                   </div>
                 </div>
               </div>
@@ -257,7 +258,7 @@
                   </div>
                 </div>
               </div>
-              <a href="users.html" class="text-center">Show All</a>
+              <a href="users.html" class="text-center show-more">Show All</a>
             </div>
             
 
@@ -318,6 +319,58 @@
                           <div class="bar" style="--percent: 60"></div>
                         </div>
                       </div>
+
+                      <div class="item">
+                        <div class="student-monitor-top">
+                          <img
+                            class="profile-photo"
+                            src="../img/handsome-adult-male-posing9.jpg"
+                            alt="Avatar"
+                          />
+                          <h3>Benson Ali</h3>
+                          <small class="text-muted"
+                            >Absent <span>2</span> days/week</small
+                          >
+                        </div>
+                        <div class="student-monitor-bottom">
+                          <div class="bar" style="--percent: 40"></div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="student-monitor-top">
+                          <img
+                            class="profile-photo"
+                            src="../img/handsome-adult-male-posing4.jpg"
+                            alt="Avatar"
+                          />
+                          <h3>Benson Ali</h3>
+                          <small class="text-muted"
+                            >Absent <span>1</span> days/week</small
+                          >
+                        </div>
+                        <div class="student-monitor-bottom">
+                          <div class="bar" style="--percent: 20"></div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="student-monitor-top">
+                          <img
+                            class="profile-photo"
+                            src="../img/handsome-adult-male-posing2.jpg"
+                            alt="Avatar"
+                          />
+                          <h3>Benson Ali</h3>
+                          <small class="text-muted"
+                            >Absent <span>5</span> days/week</small
+                          >
+                        </div>
+                        <div class="student-monitor-bottom">
+                          <div class="bar" style="--percent: 100"></div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>

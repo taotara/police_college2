@@ -86,7 +86,7 @@ new Chart(ctx3, {
     plugins: {
       legend: {
         display: true,
-        position: 'right'
+        position: 'top'
       }
     }
   },
@@ -118,7 +118,7 @@ new Chart(ctx4, {
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: 'top',
       },
     },
   },

@@ -352,8 +352,8 @@ main {
     .top {
       .right {
         .ring {
-          height: 50%;
-          width: 50%;
+          height: 94px;
+          width: 94px;
           border-radius: 50%;
           display: flex;
           justify-content: center;
@@ -369,6 +369,10 @@ main {
           background: var(--color-secondary);
         }
 
+        .platoons {
+          background: var(--color-primary);
+        }
+
         .instructors {
           background: var(--color-tertiary);
 
@@ -378,8 +382,7 @@ main {
           }
         }
 
-        .left {
-        }
+        
       }
     }
   }
@@ -403,9 +406,17 @@ main {
       align-items: center;
       gap: 1rem;
       margin-bottom: 0.7rem;
-      padding: 1.4rem var(--card-padding);
-      border-radius: var(--border-radius-3);
+      padding: 1.45rem var(--card-padding);
       transition: all 300ms ease;
+      border-bottom: 1px solid var(--color-info-light);
+
+      &:first-child {
+        margin-top: -3rem;
+      }
+
+      &:last-child {
+        border: none;
+      }
 
       .student-monitor-top {
         width: 100%;
@@ -447,26 +458,33 @@ main {
       }
     }
   }
-}
 
-/* Footer */
-footer {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (max-width: 767px) {
-  #side-nav {
-    background: var(--color-white);
-    margin-left: -250px;
-    position: fixed;
-    min-height: 100vh;
-    z-index: 1;
+  .show-more {
+    display: block;
+    margin: 1rem;
   }
 
-  #side-nav.active {
-    margin-left: 0;
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    #side-nav {
+      background: var(--color-white);
+      margin-left: -250px;
+      position: fixed;
+      min-height: 100vh;
+      z-index: 1;
+    }
+
+    #side-nav.active {
+      margin-left: 0;
+    }
   }
 }

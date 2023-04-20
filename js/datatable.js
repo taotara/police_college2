@@ -7,9 +7,16 @@ var dataSet = [
     '2011/04/25',
     '$320,800',
   ],
-  ['Garrett Winters', 'Accountant', 'Tokyo', '8422', '2011/07/25', '$170,750'],
   [
-    'Ashton Cox',
+    '<img src="../img/handsome-adult-male-posing.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
+    'Accountant',
+    'Tokyo',
+    '8422',
+    '2011/07/25',
+    '$170,750',
+  ],
+  [
+    '<img src="../img/handsome-adult-male-posing2.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Junior Technical Author',
     'San Francisco',
     '1562',
@@ -17,16 +24,23 @@ var dataSet = [
     '$86,000',
   ],
   [
-    'Cedric Kelly',
+    '<img src="../img/handsome-adult-male-posing4.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Senior Javascript Developer',
     'Edinburgh',
     '6224',
     '2012/03/29',
     '$433,060',
   ],
-  ['Airi Satou', 'Accountant', 'Tokyo', '5407', '2008/11/28', '$162,700'],
   [
-    'Brielle Williamson',
+    '<img src="../img/handsome-adult-male-posing5.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
+    'Accountant',
+    'Tokyo',
+    '5407',
+    '2008/11/28',
+    '$162,700',
+  ],
+  [
+    '<img src="../img/handsome-adult-male-posing6.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Integration Specialist',
     'New York',
     '4804',
@@ -34,7 +48,7 @@ var dataSet = [
     '$372,000',
   ],
   [
-    'Herrod Chandler',
+    '<img src="../img/handsome-adult-male-posing7.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Sales Assistant',
     'San Francisco',
     '9608',
@@ -42,7 +56,7 @@ var dataSet = [
     '$137,500',
   ],
   [
-    'Rhona Davidson',
+    '<img src="../img/handsome-adult-male-posing8.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Integration Specialist',
     'Tokyo',
     '6200',
@@ -50,7 +64,7 @@ var dataSet = [
     '$327,900',
   ],
   [
-    'Colleen Hurst',
+    '<img src="../img/handsome-adult-male-posing9.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Javascript Developer',
     'San Francisco',
     '2360',
@@ -58,7 +72,7 @@ var dataSet = [
     '$205,500',
   ],
   [
-    'Sonya Frost',
+    '<img src="../img/handsome-adult-male-posing10.jpg" width="39px" alt="Avater" style="width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; object-fit: cover;"/>',
     'Software Engineer',
     'Edinburgh',
     '1667',
@@ -249,6 +263,7 @@ var dataSet = [
 
 $(document).ready(function () {
   $('#example').DataTable({
+    scrollX: true,
     data: dataSet,
     columns: [
       { title: 'Photo' },
