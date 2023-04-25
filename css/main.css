@@ -104,7 +104,9 @@ small {
   font-size: 0.75rem;
 }
 
-form, input, select {
+form,
+input,
+select {
   font-family: poppins, sans-serif;
   color: var(--color-dark);
 }
@@ -254,6 +256,15 @@ b {
   cursor: pointer;
   color: var(--color-dark);
 }
+.content nav .dropdown ul {
+  background: var(--color-white);
+}
+.content nav .dropdown ul li a {
+  color: var(--color-dark);
+}
+.content nav .dropdown ul li a:hover {
+  background: var(--color-light);
+}
 .content nav .alert {
   margin-bottom: -10px;
 }
@@ -332,6 +343,11 @@ b {
   min-width: 200px;
   max-width: 200px;
   transition: all 0.3s;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -50px;
+  border: none;
 }
 
 main .title {
@@ -618,8 +634,23 @@ footer {
 }
 
 /* ==========Tablets and small laptops========== */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    /* overflow: hidden; */
+  }
+}
 /* ==========Smaller Tabs and Mobiles========== */
 @media (max-width: 767px) {
+  .top-heading {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .dropdown-menu[data-bs-popper] {
+    left: -110px;
+    border: none;
+  }
   #side-nav {
     background: var(--color-white);
     margin-left: -250px;

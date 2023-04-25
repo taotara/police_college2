@@ -37,12 +37,12 @@
               ><i class="fa-solid fa-gauge"></i><h3>Dashboard</h3></a
             >
           </li>
-          <li class="active">
+          <li class="">
             <a href="#" class="text-decoration-none"
               ><i class="fa-solid fa-user-group"></i><h3>Users</h3></a
             >
           </li>
-          <li class="">
+          <li class="active">
             <a href="platoon.html" class="text-decoration-none"
               ><i class="fa-solid fa-people-roof"></i><h3>Platoon</h3></a
             >
@@ -81,7 +81,7 @@
             <div class="d-flex justify-content-between d-md-none d-block">
             <button class="btn px-1 py-0 open-btn"><i class="fa-solid fa-bars"></i></button>
             </div>
-            <h1 class="top-heading">Users</h1>
+            <h1 class="top-heading">Platoons</h1>
               <div class="top-icons d-flex justify-content-between align-items-center gap-3">
                 <div class="alert d-flex justify-content-between gap-3">
                   <div class="notification">
@@ -126,31 +126,31 @@
             <div class="col-12 stretch-card grid-margin">
               <div class="card shadow p-3 mb-5 rounded border-0">
                 <div class="card-body">
-                  <h2 id="p-title" class="title">Users List</h2>
+                  <h2 id="p-title" class="title">Platoon List</h2>
 
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs mt-4">
                     <li class="nav-item">
-                      <a class="nav-link active" data-bs-toggle="tab" href="#list" id="btn1" onclick="document.getElementById('p-title').innerHTML = 'Users List'">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#list" id="btn1" onclick="document.getElementById('p-title').innerHTML = 'Platoon List'">
                         <i class="fa-solid fa-list-ul me-2"></i>User List
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-bs-toggle="tab" href="#add" id="btn2" onclick="document.getElementById('p-title').innerHTML = 'Add User'">
-                        <i class="fa-solid fa-file-circle-plus me-2"></i>Add User
+                      <a class="nav-link" data-bs-toggle="tab" href="#add" id="btn2" onclick="document.getElementById('p-title').innerHTML = 'Add Platoon'">
+                        <i class="fa-solid fa-file-circle-plus me-2"></i>Add Platoon
                       </a>
                     </li>
                   </ul>
 
                   <!-- Tab panes -->
                   <div class="tab-content mt-5">
-                    <!-- Users List Start -->
+                    <!-- Platoons List Start -->
                     <div class="tab-pane container active" id="list">
                       <table id="example" class="display" width="100%"></table>
                     </div>
-                    <!-- Users List End -->
+                    <!-- Platoons List End -->
                     <div class="tab-pane container fade" id="add">
-                      <!-- Add Users Start -->
+                      <!-- Add Platoons Start -->
                       <form class="row g-3 needs-validation" novalidate>
                         <div class="col-md-4">
                           <label for="formFile" class="form-label">Upload Profile Photo</label>
@@ -502,14 +502,14 @@
                           <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                       </form>
-                      <!-- Add Users End -->
+                      <!-- Add Platoon End -->
                     </div>
                   </div>
                   <!-- End of Tab panel -->
 
                   <!-- Modal -->
                   
-                  <!-- View User Modal -->
+                  <!-- View Platoon Modal -->
                   <div class="modal fade" id="viewUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
                       <div class="modal-content">
@@ -560,7 +560,7 @@
                     </div>
                   </div>
 
-                  <!-- Edit User Modal -->
+                  <!-- Edit Platoon Modal -->
                   <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
                       <div class="modal-content">
