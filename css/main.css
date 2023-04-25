@@ -104,6 +104,11 @@ small {
   font-size: 0.75rem;
 }
 
+form, input, select {
+  font-family: poppins, sans-serif;
+  color: var(--color-dark);
+}
+
 .profile-photo {
   width: 2.8rem;
   height: 2.8rem;
@@ -114,7 +119,7 @@ small {
 }
 
 .text-muted {
-  color: var(--color-info-dark);
+  color: var(--color-info-dark) !important;
 }
 
 p {
@@ -174,6 +179,15 @@ b {
   width: 3.4rem;
   height: 3.5rem;
 }
+.sidebar .close-btn {
+  cursor: pointer;
+  color: var(--color-dark);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
 .sidebar .header-box h2 {
   color: var(--color-secondary-logo);
   font-size: 1rem;
@@ -203,6 +217,9 @@ b {
 .sidebar li a:hover {
   background: var(--color-light);
   color: var(--color-primary);
+}
+.sidebar li a h3 {
+  display: inline;
 }
 .sidebar li a i {
   font-size: 20px;
@@ -236,6 +253,9 @@ b {
 .content nav button {
   cursor: pointer;
   color: var(--color-dark);
+}
+.content nav .alert {
+  margin-bottom: -10px;
 }
 .content nav .alert .notification {
   position: relative;
@@ -281,13 +301,13 @@ b {
 }
 .content nav .theme-toggler {
   background: var(--color-light);
-  height: 1.6rem;
+  height: 1.8rem;
   width: 5rem;
   cursor: pointer;
   border-radius: var(--border-radius-1);
 }
 .content nav .theme-toggler i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 50%;
   height: 100%;
   display: flex;
@@ -314,9 +334,49 @@ b {
   transition: all 0.3s;
 }
 
+main .title {
+  color: var(--color-info-dark);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+main .card {
+  background: var(--color-white);
+}
+main .card-header h2 {
+  color: var(--color-dark);
+}
+main .mode-bg {
+  background: var(--color-white);
+}
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+  padding: 0.5rem 0;
+}
+main table thead th {
+  color: var(--color-dark-variant);
+}
+main .dataTables_wrapper .dataTables_length,
+main .dataTables_wrapper .dataTables_filter,
+main .dataTables_wrapper .dataTables_info,
+main .dataTables_wrapper .dataTables_processing,
+main .dataTables_wrapper .dataTables_paginate {
+  color: var(--color-dark);
+}
+main .dataTables_wrapper .dataTables_length select {
+  color: var(--color-dark);
+}
+main .dataTables_wrapper .dataTables_filter input {
+  color: var(--color-dark);
+}
+main .quick-info .top .left h1,
+main .quick-info .top .left h3 {
+  color: var(--color-dark);
+}
 main .quick-info .top .right .ring {
-  height: 94px;
-  width: 94px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -324,7 +384,7 @@ main .quick-info .top .right .ring {
 }
 main .quick-info .top .right .ring i {
   color: var(--color-white);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 main .quick-info .top .right .student {
   background: var(--color-secondary);
@@ -337,7 +397,7 @@ main .quick-info .top .right .instructors {
 }
 main .quick-info .top .right .instructors i {
   color: var(--color-primary);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 main .chart-container {
   position: relative;
@@ -348,6 +408,9 @@ main .chart-container {
 main .student-monitor {
   margin-top: 2rem;
   width: 100%;
+}
+main .student-monitor h2 {
+  color: var(--color-dark);
 }
 main .student-monitor .item {
   width: 100%;
@@ -399,23 +462,178 @@ main .show-more {
   display: block;
   margin: 1rem;
 }
-main footer {
+main .nav-link {
+  color: rgb(125, 141, 161);
+}
+main .nav-link:hover {
+  color: var(--color-primary);
+}
+main .nav-tabs .nav-link.active {
+  color: var(--color-primary);
+}
+main .action button {
+  background: transparent;
+  cursor: pointer;
+}
+main .action button i {
+  margin-right: 0.5rem;
+  color: var(--color-dark-variant);
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+main .action button i:hover {
+  color: var(--color-primary-variant);
+}
+main .modal-content {
+  background: var(--color-background);
+}
+main .modal-content h2 {
+  color: var(--color-dark);
+}
+main .modal-content .modal-header .modal-title {
+  color: var(--color-dark);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+main .modal-content .modal-header .btn-close {
+  --bs-btn-close-color: red !important;
+}
+main .user-profile-top {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+main .user-profile-top .user-photo {
+  background: transparent;
+}
+main .user-profile-top .user-photo img {
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .user-profile-top .profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  justify-self: flex-start;
+}
+main .user-profile-top .profile-details .name {
+  font-weight: 300;
+  color: var(--color-dark);
+}
+main .user-profile-top .profile-details p span {
+  color: var(--color-dark);
+  margin-left: 0.5rem;
+}
+main .user-profile-top .doc-action {
+  position: absolute;
+  right: 0;
+}
+main .user-profile-top .doc-action button {
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px;
+  color: #717171;
+  cursor: pointer;
+}
+main .user-profile-bottom {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+main .user-profile-bottom .user-profile-left,
+main .user-profile-bottom .user-profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: start;
+}
+main .user-profile-bottom p i {
+  display: inline-block;
+  max-width: 500px;
+  color: var(--color-dark);
+  margin-left: 0.5rem;
+}
+main .btn-primary {
+  height: 50px;
+  background: var(--color-primary);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+}
+main .btn-primary:hover {
+  background: var(--color-primary-variant);
+}
+main .btn-secondary {
+  height: 50px;
+  background: var(--color-secondary);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+}
+main .delete-user {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .delete-user-btn {
+  display: flex;
+  justify-content: space-around;
+}
+main .delete-user-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+main .delete-user-btn button:first-child {
+  background: var(--color-danger);
+}
+main .delete-user-btn button:last-child {
+  background: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+  background: var(--color-light);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
+  color: var(--color-dark);
 }
+
+/* ==========Tablets and small laptops========== */
+/* ==========Smaller Tabs and Mobiles========== */
 @media (max-width: 767px) {
-  main #side-nav {
+  #side-nav {
     background: var(--color-white);
     margin-left: -250px;
     position: fixed;
     min-height: 100vh;
     z-index: 1;
   }
-  main #side-nav.active {
+  #side-nav.active {
     margin-left: 0;
+  }
+  .profile .info {
+    display: none;
+  }
+  .sidebar ul li:last-child {
+    position: relative;
   }
 }/*# sourceMappingURL=main.css.map */
