@@ -54,7 +54,7 @@
           </li>
           <li class="">
             <a
-              href="#"
+              href="messages.html"
               class="text-decoration-none d-flex justify-content-between"
             >
               <span><i class="fa-solid fa-envelope"></i><h3>Message</h3></span>
@@ -151,10 +151,11 @@
                     <!-- Users List End -->
                     <div class="tab-pane container fade" id="add">
                       <!-- Add Users Start -->
-                      <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-4">
+                      <form class="row g-3 needs-validation" name="addUserForm">
+                        <div class="col-md-12 upload">
+                          <img id="blah" src="../img/upload.png" alt="your image" width="180"/>
                           <label for="formFile" class="form-label">Upload Profile Photo</label>
-                          <input class="form-control" type="file" id="formFile">
+                          <input type='file' onchange="readURL(this);" />
                         </div>
                         <div class="col-md-4">
                           <label for="surename" class="form-label">Surname<span class="danger">*</span></label>
@@ -569,7 +570,7 @@
                           <button type="button" class="btn-close btn-c" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form class="row g-3 needs-validation" novalidate>
+                          <form class="row g-3 needs-validation" name="editUserForm">
                             <div class="col-md-4">
                               <label for="formFile" class="form-label">Upload Profile Photo</label>
                               <input class="form-control" type="file" id="formFile">

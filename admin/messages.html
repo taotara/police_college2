@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users | Nigeria Police College Ikeja</title>
+    <link rel="icon" type="image/x-icon" href="../img/pngwing 4.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../css/rich-text-editor.css">
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-grow-1">
+      <aside class="sidebar" id="side-nav">
+        <div
+          class="header-box d-flex align-items-center justify-content-between px-2 pt-3 pb-4 d-flex"
+        >
+          <img src="../img/logo.png" alt="Nigeria Police Logo" width="48px" />
+          <h2>NIGERIA Police College Ikeja</h2>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-dark">
+            <i class="fa-solid fa-xmark"></i></i>
+          </button>
+        </div>
+        <ul class="list-unstyled px-2">
+          <li class="">
+            <a href="dashboard.html" class="text-decoration-none"
+              ><i class="fa-solid fa-gauge"></i><h3>Dashboard</h3></a
+            >
+          </li>
+          <li class="">
+            <a href="users.html" class="text-decoration-none"
+              ><i class="fa-solid fa-user-group"></i><h3>Users</h3></a
+            >
+          </li>
+          <li class="">
+            <a href="platoon.html" class="text-decoration-none"
+              ><i class="fa-solid fa-people-roof"></i><h3>Platoon</h3></a
+            >
+          </li>
+          <li class="">
+            <a href="#" class="text-decoration-none"
+              ><i class="fa-solid fa-scroll"></i><h3>Exams</h3></a
+            >
+          </li>
+          <li class="active">
+            <a
+              href="messages.html"
+              class="text-decoration-none d-flex justify-content-between"
+            >
+              <span><i class="fa-solid fa-envelope"></i><h3>Message</h3></span>
+              <span class="bg-danger rounded-pill text-white py-0 px-2"
+                >02</span
+              >
+            </a>
+          </li>
+          <li class="">
+            <a href="settings.html" class="text-decoration-none"
+              ><i class="fa-solid fa-screwdriver-wrench"></i><h3>Settings</h3></a
+            >
+          </li>
+          <li class="">
+            <a href="#" class="text-decoration-none"
+              ><i class="fa-solid fa-right-from-bracket"></i><h3>Logout</h3></a
+            >
+          </li>
+        </ul>
+      </aside>
+      <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <div class="d-flex justify-content-between d-md-none d-block">
+            <button class="btn px-1 py-0 open-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <h1 class="top-heading">Messages</h1>
+              <div class="top-icons d-flex justify-content-between align-items-center gap-3">
+                <div class="alert d-flex justify-content-between gap-3">
+                  <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="count">12</div>
+                  </div>
+                  <div class="mail">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="count">5</div>
+                  </div>
+                </div>
+                <div class="theme-toggler d-flex justify-content-between">
+                  <i class="fa-solid fa-sun active"></i>
+                  <i class="fa-solid fa-moon"></i>
+              </div>
+              <div class="dropdown">
+                <div class="profile d-flex gap-3" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="info">
+                    <p>Hey, <b>Daniel</b></p>
+                    <small class="text-muted">Admin</small>
+                  </div>
+                  <div>
+                    <img
+                      class="profile-photo"
+                      src="../img/handsome-adult-male-posing2.jpg"
+                      alt="Avater"
+                    />
+                  </div>
+                </div>
+                <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user me-2"></i>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sliders me-2"></i>Settings</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-regular fa-envelope me-2"></i>Inbox</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>logout</a></li>
+                </ul>
+              </div>
+              </div>
+          </div>
+        </nav>
+        <main>
+          <div class="row px-4 mt-4">
+            <div class="col-12 stretch-card grid-margin">
+              <div class="card shadow p-3 mb-5 rounded border-0">
+                <div class="card-body">
+                  <h2 id="p-title" class="title">Inbox</h2>
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs mt-4">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#inbox" id="btn1" onclick="document.getElementById('p-title').innerHTML = 'Inbox'">
+                        <i class="fa-sharp fa-regular fa-envelope-open me-2"></i>Inbox
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#newMessage" id="btn2" onclick="document.getElementById('p-title').innerHTML = 'New Message'">
+                        <i class="fa-solid fa-feather me-2"></i></i>New Message
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content mt-5">
+                    <!-- Inbox Start -->
+                    <div class="tab-pane container active" id="inbox">
+                      <div class="d-flex justify-content-between border-bottom pb-4">
+                        <div class="d-flex gap-3 left-btn">
+                          <input class="form-check-input fs-4" type="checkbox" value="" id="checkAll">
+                          <button class="btn border btn-dark-mode"><i class="fa-solid fa-rotate-right"></i></button>
+                          <div class="dropdown">
+                            <button class="btn border btn-dark-mode" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa-solid fa-sliders"></i>
+                            </button>
+                            <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">All</a></li>
+                              <li><a class="dropdown-item" href="#">Unread</a></li>
+                              <li><a class="dropdown-item" href="#">Flaged</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="right-btn">
+                          <!-- <button class="btn border btn-dark-mode"><i class="fa-regular fa-pen-to-square me-2"></i>Compose</button> -->
+                        </div>
+                      </div>
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="#">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-warning ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing2.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Diana</a><span class="badge rounded-pill bg-success ms-2">NEW</span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Your Daily Work Summary</span><span class="mx-1">–</span><span>And they'd probably do a lot of damage to an...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Today</span>
+                        </div>
+                      </div>
+
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-warning ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing4.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Ologbenla</a><span class="badge rounded-pill bg-success ms-2">NEW</span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Get involved for International Women's Day - with link 👩</span><span class="mx-1">–</span><span>–The link below is now clickable for Chrome users...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Today</span>
+                        </div>
+                      </div>
+
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-300 ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing3.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Chukuka</a><span class="badge rounded-pill bg-success ms-2"></span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Bruce Banner - Invitation to edit</span><span class="mx-1">–</span><span>–Tony Stark has invited you to edit the following document...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Jan 15</span>
+                        </div>
+                      </div>
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-300 ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Olaitan</a><span class="badge rounded-pill bg-success ms-2"></span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Technology Brief: Who’s keeping us safe?</span><span class="mx-1">–</span><span>–policy at Google, Twitter, and Pinterest, says, "The team starts to feel like the...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Jan 15</span>
+                        </div>
+                      </div>
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-300 ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing9.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Chukuka</a><span class="badge rounded-pill bg-success ms-2"></span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Bruce Banner - Invitation to edit</span><span class="mx-1">–</span><span>–Tony Stark has invited you to edit the following document...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Jan 15</span>
+                        </div>
+                      </div>
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-300 ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing9.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Chukuka</a><span class="badge rounded-pill bg-success ms-2"></span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Bruce Banner - Invitation to edit</span><span class="mx-1">–</span><span>–Tony Stark has invited you to edit the following document...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Jan 15</span>
+                        </div>
+                      </div>
+                      <!-- Message item -->
+                      <div class="row border-bottom border-200 hover-actions-trigger hover-shadow py-3 px-1 mx-0" data-href="../../app/email/email-detail.html">
+                        <div class="col-auto d-none d-sm-block">
+                          <div class="d-flex align-items-center">
+                            <div class="form-check mb-0 fs-0">
+                              <input class="form-check-input fs-4 m-0" type="checkbox" id="checkbox-2" data-bulk-select-row="data-bulk-select-row">
+                            </div>
+                            <svg class="svg-inline--fa fa-star fa-w-18 text-300 ms-1" data-fa-transform="down-4" aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="" style="transform-origin: 0.5625em 0.75em;"><g transform="translate(288 256)"><g transform="translate(0, 128)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" transform="translate(-288 -400)"></path></g></g></svg>
+                          </div>
+                        </div>
+                        <div class="col col-md-9 col-xxl-10">
+                          <div class="row">
+                            <div class="col-md-4 col-xl-3 col-xxl-2 ps-md-0 mb-1 mb-md-0">
+                              <div class="d-flex position-relative align-items-center">
+                                <div class="avatar avatar-s">
+                                  <img class="rounded-soft" src="../img/handsome-adult-male-posing9.jpg" alt="">
+                                </div>
+                                <div class="flex-1 ms-2"><a class="fw-bold stretched-link inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal">Chukuka</a><span class="badge rounded-pill bg-success ms-2"></span></div>
+                              </div>
+                            </div>
+                            <div class="col"><a class="d-block inbox-link" href="#" data-bs-toggle="modal" data-bs-target="#viewMailModal"><span class="fw-bold">Bruce Banner - Invitation to edit</span><span class="mx-1">–</span><span>–Tony Stark has invited you to edit the following document...</span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-auto ms-auto d-flex flex-column justify-content-between">
+                          <span class="fw-bold btn-dark-mode">Jan 15</span>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                    <!-- Inbox End -->
+                    <div class="tab-pane container fade" id="newMessage">
+                      <!-- New Message Start -->
+                      <form class="row g-3 needs-validation" name="newMessageForm">
+                        <div class="col-md-12">
+                            <label for="sender" class="form-label">Sender</label>
+                            <input type="text" class="form-control" id="sender">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="subjectt" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject">
+                        </div>
+                        <div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+                          <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary me-2"><i class="fa-solid fa-paper-plane me me-2"></i>Send</button>
+                          <button type="submit" class="btn btn-secondary me-2"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
+                          <button type="reset" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Discard</button>
+                        </div>
+                      </form>
+                      <!-- Add Users End -->
+                    </div>
+                  </div>
+                  <!-- End of Tab panel -->
+
+                  <!-- Modal -->
+                  
+                  <!-- View User Modal -->
+                  <div class="modal fade" id="viewMailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <div class="d-flex justify-content-between pb-4">
+                        <div class="d-flex gap-3 left-btn">
+                          <button class="btn border btn-dark-mode" data-bs-dismiss="modal"><i class="fa-solid fa-arrow-left"></i></button>
+                          <span class="mx-1 mx-sm-2 text-300 pt-2">|</span>
+                          <button class="btn border btn-dark-mode"><i class="fa-solid fa-box-archive"></i></button>
+                          <button class="btn border btn-dark-mode"><i class="fa-solid fa-trash-can"></i></button>
+                          <button class="btn border btn-dark-mode"><i class="fa-solid fa-envelope"></i></button>
+                          <button class="btn border btn-dark-mode"><i class="fa-solid fa-print"></i></button>
+                        </div>
+                        
+                      </div>
+                          <div class="d-flex justify-content-around">
+                            <div class="d-none d-sm-block">
+                              <small>2 of 354</small>
+                              <button class="btn border btn-dark-mode"><i class="fa-solid fa-chevron-left"></i></button>
+                              <button class="btn border btn-dark-mode"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn border btn-dark-mode" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="fa-solid fa-gear"></i>
+                                </button>
+                                <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">All</a></li>
+                                  <li><a class="dropdown-item" href="#">Unread</a></li>
+                                  <li><a class="dropdown-item" href="#">Flaged</a></li>
+                                </ul>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <div class="d-flex justify-content-between">
+                              <div class="d-flex">
+                                <img class="profile-photo" src="../img/handsome-adult-male-posing3.jpg" alt="Avatar">
+                                <div class="d-flex flex-column">
+                                  <h2>The new police force</h2>
+                                  <p>Omolola Olatunji <small>&lt;omololao@mail.com&gt;</small></p>
+                                </div>
+                              </div>
+                              <div>
+                                  <p>8:40 AM (9 hours ago)</p>
+                                </div>
+                          </div>
+                          <div class="mail-body">
+                            <img src="../img/police-gang.jpg" alt="">
+                            <h2 class="text-center display-5 py-3">The new Nigeria police dress code</h2>
+                            <p class="fs-5 px-3">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta ipsum, qui maxime similique soluta error, facere, dolorum sed deserunt ullam pariatur asperiores ipsam provident. Corporis recusandae exercitationem fugit placeat?
+                              Ipsum molestiae doloribus at sequi voluptatibus esse nesciunt autem, tempora aperiam sint culpa, saepe odit veritatis? Atque ad dolorem laborum nobis blanditiis, at excepturi. Maiores quo totam consequatur modi eligendi.
+                              Id, porro perferendis provident ea facere rem amet nobis libero aperiam distinctio modi facilis, inventore eum minima laudantium earum nisi velit atque. Ad possimus id ea placeat fugit, vel inventore?
+                              Sequi cum exercitationem corporis, excepturi praesentium officiis doloremque aut ab alias esse provident error ducimus voluptate vitae sunt. Adipisci atque esse corrupti aliquid nesciunt nihil explicabo facere laboriosam recusandae quam?
+                              Amet, nihil ex? Laborum facilis expedita adipisci temporibus nobis molestias mollitia quo impedit perferendis quas! Accusamus cumque illo aliquam delectus sit, sequi aperiam nisi repudiandae harum. Accusamus facere cumque dignissimos.
+                              Necessitatibus, accusantium. Dolor soluta commodi quidem reiciendis amet dolorum provident possimus deserunt labore consequatur ab inventore, laudantium delectus quaerat laboriosam in laborum omnis obcaecati eum, numquam cumque, adipisci quos ipsum.
+                              Doloribus facere soluta deserunt ipsum ut, inventore voluptate hic voluptas rerum labore quo modi, dolorum sint. Officia ipsam hic distinctio eveniet aspernatur reprehenderit debitis, similique, sed voluptatem quidem repellendus commodi?
+                              Quis possimus, magnam voluptatibus autem quod at sint laboriosam magni maxime ipsam dolorem veritatis sapiente assumenda libero, dolor id quae maiores obcaecati? Repudiandae beatae voluptates ex nam fugit eius eum?
+                              Veritatis quidem sit nihil laborum qui dolores neque optio, eius est quis. Quae magni libero atque consequuntur, obcaecati reprehenderit ducimus eum eaque hic nesciunt praesentium similique, asperiores possimus maiores totam.
+                              Ab, veniam. Impedit laboriosam officiis in voluptatum eum totam praesentium numquam laborum, similique dignissimos necessitatibus consequuntur tempora recusandae corrupti. Excepturi, soluta facere! Officia, reiciendis. Qui vitae ad nulla ab eaque.
+                              Nam autem eaque nesciunt quia libero sapiente nisi voluptatum cum labore deserunt minus architecto, quidem unde aut molestiae esse delectus debitis aliquam veniam magnam. Ea maiores exercitationem quam magnam facilis.
+                              Saepe nobis quis quisquam aliquid, natus iusto hic reprehenderit quasi iste, esse rem error, perspiciatis eaque. Nesciunt perferendis esse, quasi amet, quod ipsa dolore, facere porro harum voluptas fuga. Vitae.
+                              Architecto illum neque, quaerat voluptas aliquam dolorem, natus nisi voluptatum maiores tenetur eum nobis qui laborum minima! Minus iste velit distinctio quas? Alias quo, atque cum placeat voluptatum laudantium corrupti?
+                              Culpa placeat cum quisquam autem perferendis, vitae eum atque repellendus voluptatum dolorum et incidunt ab, minus eveniet blanditiis est maiores. Laboriosam obcaecati laudantium beatae cumque sit labore magni quam neque?
+                              Ipsum ea architecto quasi? Eius et, dicta consequuntur laborum dolorum consequatur eligendi ab perferendis. Sed, est? Iure corrupti atque magnam voluptas vel, quisquam culpa a accusamus nesciunt minima? Itaque, deleniti?
+                              Dicta, perferendis autem fuga quibusdam nam doloribus dolorem iste aut aperiam. Quisquam sapiente nostrum magnam cupiditate velit iusto accusantium illo labore! Ullam hic in dolore nihil ipsa molestiae, aliquid rem?
+                              Pariatur, distinctio qui dolore est consequatur sit libero quibusdam ad quod provident temporibus animi eius? Facilis, quae unde libero minima, eligendi asperiores voluptatibus, porro in cum sit quaerat impedit a?
+                              Illo natus eveniet tempore porro. Voluptatem quis neque praesentium, iure molestias autem beatae commodi eum sequi vitae alias exercitationem veritatis quidem repudiandae ea, mollitia ipsam placeat, deserunt ratione ab! Porro.
+                              Eligendi rem in reprehenderit, nulla vero voluptas sequi reiciendis quam, porro quasi illum dolorum earum ipsum fuga vitae obcaecati dolore iusto ea aliquid aut! Exercitationem eos at eum ut ducimus!
+                              Officia vitae at reiciendis ipsam eius. Necessitatibus, ab quia reiciendis repellendus voluptas neque nulla recusandae culpa amet perspiciatis et voluptatibus odit harum laudantium tenetur. Voluptatibus cupiditate deleniti nam similique sint.
+                              Reiciendis aliquid eveniet earum, minus cum impedit commodi molestiae corporis ab! Illum eos consectetur corporis, vel dicta quaerat non neque dolore, quae ipsam distinctio similique voluptatem atque dolorum, tempora commodi?
+                              Consequuntur facere tenetur quo dignissimos iste. Reiciendis, earum asperiores velit porro rerum incidunt esse! Accusantium odio rem rerum, error nesciunt vel quo dolorum ab repellendus hic. Perspiciatis natus eligendi praesentium!
+                              Nihil neque explicabo veritatis sit dolor voluptates maxime. Architecto dolores, possimus natus, magnam cumque sunt, incidunt illo enim eius quas asperiores saepe aperiam. Quas, nihil consectetur? Optio aliquam et blanditiis!
+                            </p>
+                          </div>
+                        </div> <!-- end of modal body -->
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+      </div>
+    </div>
+    <footer>
+          <p>© Copyrights Police College Ikeja 2023. All rights reserved.</p>
+        </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      $('.sidebar ul li').on('click', function () {
+        $('.sidebar ul li.active').removeClass('active');
+        $(this).addClass('active');
+      });
+
+      $('.open-btn').on('click', function(){
+          $('.sidebar').addClass('active');
+      });
+      
+      $('.close-btn').on('click', function(){
+          $('.sidebar').removeClass('active');
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/datatable.js"></script>
+    <!-- Angular JS -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js'></script>
+    <!-- Angular Sanitize JS -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-sanitize.min.js'></script>
+    <!-- Text Angular JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js'></script>
+
+    <script>
+      angular.module("textAngularTest", ['textAngular']);
+        function wysiwygeditor($scope) {
+          $scope.orightml = '';
+          $scope.htmlcontent = $scope.orightml;
+          $scope.disabled = false;
+        };
+    </script>
+    
+
+  </body>
+</html>

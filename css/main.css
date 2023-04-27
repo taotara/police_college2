@@ -576,6 +576,9 @@ main .user-profile-bottom p i {
   color: var(--color-dark);
   margin-left: 0.5rem;
 }
+main .btn {
+  color: var(--color-dark);
+}
 main .btn-primary {
   height: 50px;
   background: var(--color-primary);
@@ -590,6 +593,14 @@ main .btn-primary:hover {
 main .btn-secondary {
   height: 50px;
   background: var(--color-secondary);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+}
+main .btn-danger {
+  height: 50px;
+  background: var(--color-danger);
   padding: 15px 30px;
   border-radius: 5px;
   font-weight: 600;
@@ -619,6 +630,54 @@ main .delete-user-btn button:first-child {
 main .delete-user-btn button:last-child {
   background: var(--color-secondary);
 }
+main .active-status span {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  color: #364a31;
+  background: var(--color-success);
+  text-align: center;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+main .pending-status span {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  color: #364a31;
+  background: var(--color-warning);
+  text-align: center;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+main .avatar-s {
+  height: 2rem;
+  width: 2rem;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+main .avatar {
+  position: relative;
+  display: inline-block;
+}
+main .svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+main .hover-actions-trigger .inbox-link {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+main .btn-dark-mode {
+  color: var(--color-dark);
+}
+main .upload img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 /* Footer */
 footer {
@@ -636,7 +695,7 @@ footer {
 /* ==========Tablets and small laptops========== */
 @media screen and (max-width: 1200px) {
   .container {
-    width: 94%;
+    width: 100%;
     /* overflow: hidden; */
   }
 }
@@ -666,5 +725,8 @@ footer {
   }
   .sidebar ul li:last-child {
     position: relative;
+  }
+  d-sm-block {
+    display: block !important;
   }
 }/*# sourceMappingURL=main.css.map */
