@@ -152,26 +152,64 @@ b {
   color: var(--color-warning);
 }
 
-.login-top {
+header .header-box h2 {
+  color: var(--color-secondary-logo);
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+header .header-box img {
+  width: 48px;
+}
+header .theme-toggler {
+  background: var(--color-light);
+  height: 1.8rem;
+  width: 5rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+header .theme-toggler i {
+  font-size: 1rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .theme-toggler i.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+
+main .loginContainer {
+  background: var(--color-white);
+}
+main .loginContainer .top {
   width: 100%;
-  margin-top: -3rem;
-  margin-right: -5rem;
-  margin-left: -3rem;
 }
-.login-top .top-color-box {
-  height: 144px;
+main .loginContainer .top .colors {
+  height: 120px;
 }
-.login-top .green {
+main .loginContainer .top .colors .green {
   background: var(--color-secondary);
+  border-radius: 0.5rem 0 0 0;
 }
-.login-top .yellow {
+main .loginContainer .top .colors .yellow {
   background: var(--color-tertiary);
 }
-.login-top .yellow img {
+main .loginContainer .top .colors .yellow img {
   width: 6.25rem;
 }
-.login-top .blue {
+main .loginContainer .top .colors .blue {
   background: var(--color-primary);
+  border-radius: 0 0.5rem 0 0;
+}
+main .loginContainer .bottom {
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar {
