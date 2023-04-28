@@ -189,7 +189,7 @@ main .loginContainer .top {
   width: 100%;
 }
 main .loginContainer .top .colors {
-  height: 120px;
+  height: 90px;
 }
 main .loginContainer .top .colors .green {
   background: var(--color-secondary);
